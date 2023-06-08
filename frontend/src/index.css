@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Audiowide&family=DM+Serif+Display&family=Inter&family=Russo+One&family=Work+Sans:wght@300;900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Style the custom scrollbar */
+/* This example uses a blue background and a round thumb */
+/* Adjust the styles to match the macOS scrollbar appearance */
+::-webkit-scrollbar-track {
+  background-color: #e5e5e5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1877f2;
+  border-radius: 8px;
+}
+
+/* Optional: Add hover and active styles for the thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1256a3;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #0e4180;
+}
+
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Adjust the height as needed */
+}
+
+.loader-svg {
+  animation: rotate 1s linear infinite;
+  width: 50px;
+  height: 50px;
+}
+
+.loader-circle {
+  fill: transparent;
+  stroke: #000;
+  stroke-width: 2;
+  stroke-dasharray: 80;
+  stroke-dashoffset: 60;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 80;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -80;
+  }
+}
